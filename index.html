@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Arete Media | Digital Service Agency</title>
+<title>Aréte Media | Digital Service Agency</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -213,7 +213,12 @@ footer p{font-size:clamp(10px,1.2vw,12px);color:var(--gray)}
 
 <!-- LOADER -->
 <div class="loader" id="loader">
-  <div class="loader-logo"><img src="logo.png" alt="Arete Media"/></div>
+  <div class="loader-logo">
+  <div style="display:flex;align-items:center;gap:0.75rem">
+    <img src="icon.png" alt="Aréte Media" style="height:clamp(36px,6vw,52px);width:auto;filter:invert(1)"/>
+    <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,32px);font-weight:300;letter-spacing:0.08em;color:#FAFAF8;white-space:nowrap">Aréte Media</span>
+  </div>
+</div>
   <div class="loader-bar"></div>
 </div>
 
@@ -222,8 +227,10 @@ footer p{font-size:clamp(10px,1.2vw,12px);color:var(--gray)}
 <div class="cursor-ring" id="cursorRing"></div>
 
 <!-- NAV -->
-<nav id="navbar">
-  <div class="nav-logo"><img src="logo.png" alt="Arete Media"/></div>
+<div class="nav-logo" onclick="showPage('home')" style="cursor:pointer;display:flex;align-items:center;gap:0.6rem">
+  <img src="icon.png" alt="Aréte Media icon" style="height:clamp(28px,4vw,38px);width:auto;display:block"/>
+  <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(16px,2vw,22px);font-weight:400;letter-spacing:0.06em;color:var(--black);white-space:nowrap">Aréte <span style="font-weight:300;color:var(--gray)">Media</span></span>
+</div>
   <ul class="nav-links">
     <li><a href="#" onclick="showPage('home')">Home</a></li>
     <li><a href="#services" onclick="showPage('home')">Services</a></li>
@@ -245,7 +252,7 @@ footer p{font-size:clamp(10px,1.2vw,12px);color:var(--gray)}
 <div class="page active" id="home-page">
 
   <section class="hero">
-    <p class="hero-tag">Arete Media · Digital Service Agency</p>
+    <p class="hero-tag">Aréte Media · Digital Service Agency</p>
     <h1>
       <span class="line">Where digital</span>
       <span class="line">presence meets</span>
@@ -334,7 +341,7 @@ footer p{font-size:clamp(10px,1.2vw,12px);color:var(--gray)}
 
   <section class="cta" id="contact-cta">
     <h2 class="reveal">Ready to build<br>something <em>great?</em></h2>
-    <p class="reveal delay-1">Let's talk about your business and how Arete Media can help you grow your digital presence.</p>
+    <p class="reveal delay-1">Let's talk about your business and how Aréte Media can help you grow your digital presence.</p>
     <button class="btn-primary reveal delay-2" onclick="showPage('contact')">Start a project →</button>
   </section>
 
@@ -362,7 +369,7 @@ footer p{font-size:clamp(10px,1.2vw,12px);color:var(--gray)}
       </div>
       <div class="contact-detail">
         <p class="contact-detail-title">Part of</p>
-        <p class="contact-detail-value">The Arete Group</p>
+        <p class="contact-detail-value">The Aréte Group</p>
       </div>
       <div class="contact-services-list">
         <p class="contact-detail-title" style="margin-bottom:1rem">Our services</p>
@@ -408,7 +415,7 @@ footer p{font-size:clamp(10px,1.2vw,12px);color:var(--gray)}
         </div>
         <label class="form-check">
           <input type="checkbox" id="consent"/>
-          <span>I agree to be contacted by Arete Media regarding my enquiry. We respect your privacy and will never share your information.</span>
+          <span>I agree to be contacted by Aréte Media regarding my enquiry. We respect your privacy and will never share your information.</span>
         </label>
         <button class="form-submit" onclick="submitForm()">Send enquiry →</button>
       </div>
@@ -427,9 +434,11 @@ footer p{font-size:clamp(10px,1.2vw,12px);color:var(--gray)}
 
 <!-- FOOTER (shared) -->
 <footer>
-  <div class="footer-logo"><img src="logo.png" alt="Arete Media"/></div>
-  <p>© 2026 Arete Media. All rights reserved.</p>
-  <p>📍 Botswana · Part of the Arete Group</p>
+<div class="footer-logo" style="display:flex;align-items:center;gap:0.5rem">
+  <img src="icon.png" alt="Aréte Media" style="height:28px;width:auto;opacity:0.8"/>
+  <span style="font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:400;letter-spacing:0.06em;color:var(--black)">Aréte <span style="font-weight:300;color:var(--gray)">Media</span></span>
+</div>  <p>© 2026 Aréte Media. All rights reserved.</p>
+  <p>📍 Botswana · Part of the Aréte Group</p>
 </footer>
 
 <script>
