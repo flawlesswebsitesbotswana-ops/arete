@@ -517,14 +517,34 @@ document.querySelectorAll('.stat-num').forEach(el => countObs.observe(el));
 // Form submit
 function submitForm() {
   const fname = document.getElementById('fname').value.trim();
+  const lname = document.getElementById('lname').value.trim();
   const email = document.getElementById('email').value.trim();
+  const business = document.getElementById('business').value.trim();
   const service = document.getElementById('service').value;
+  const message = document.getElementById('message').value.trim();
   const consent = document.getElementById('consent').checked;
+
   if(!fname || !email || !service) { alert('Please fill in your name, email, and the service you\'re interested in.'); return; }
   if(!consent) { alert('Please agree to be contacted before submitting.'); return; }
-  document.getElementById('enquiry-form').style.display='none';
-  document.getElementById('success-msg').classList.add('show');
+
+  const data = { fname, lname, email, business, service, message };
+
+  fetch('https://formspree.io/f/xredydzg', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify(data)
+  })
+  .then(res => {
+    if(res.ok) {
+      document.getElementById('enquiry-form').style.display='none';
+      document.getElementById('success-msg').classList.add('show');
+    } else {
+      alert('Something went wrong. Please try again or email us directly.');
+    }
+  })
+  .catch(() => alert('Network error. Please check your connection and try again.'));
 }
+
 </script>
 </body>
 </html>
